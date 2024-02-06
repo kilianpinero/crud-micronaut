@@ -1,43 +1,42 @@
-# CRUD con Micronaut
+## CRUD with Micronaut
 
-Aplicacion CRUD simple desarrollado con Micronaut. Expone endpoints REST para realizar operaciones básicas en una entidad `Country`.
+Simple CRUD application developed with Micronaut. It exposes REST endpoints to perform basic operations on a `Country` entity.
 
-## Requisitos
+## Requirements
 
 - Java 11
 - Maven 3.6.2
 - H2 Database
 
-## Ejecución
+## Execution
 
-Para ejecutar la aplicación, simplemente ejecutar el siguiente comando:
+To run the application, simply execute the following command:
 
 ```bash
 java -jar ./target/crud-micronaut.jar
 ```
 
-Esto iniciará la aplicación en modo de desarrollo. Puede acceder a los endpoints REST a través de `http://localhost:8081/country`.
+This will start the application in development mode. You can access the REST endpoints via `http://localhost:8081/country`.
 
 ## Endpoints
 
-La aplicación expone los siguientes endpoints:
+The application exposes the following endpoints:
 
-- `GET /country/list`: Obtiene la lista de todos los países.
-- `GET /country/list/{id}`: Obtiene un país por su ID.
-- `POST /country/add`: Agrega un nuevo país.
-- `PUT /country/update`: Actualiza un país existente.
-- `DELETE /country/{id}`: Elimina un país por su ID.
+- `GET /country/list`: Get the list of all countries.
+- `GET /country/list/{id}`: Get a country by its ID.
+- `POST /country/add`: Add a new country.
+- `PUT /country/update`: Update an existing country.
+- `DELETE /country/{id}`: Delete a country by its ID.
 
+## Testing
 
-## Pruebas
-
-El objetivo de esta operación es comprobar la rapidez con la que levanta el servicio y poder compararlo con otras aplicaciones hechas con lenguajes de programación diferentes.
-Se han hecho 3 pruebas de lanzamiento de esta aplicación y los resultados son los siguientes:
+The purpose of these tests is to check the speed at which the service starts and compare it with other applications built with different programming languages. Three launch tests have been conducted for this application with the following results:
 
 - 3769ms
 - 3253ms
 - 3166ms
 
-## Conclusión
+## Conclusion
 
-La aplicación es bastante rápida y se podria considerar para fines en los que se necesite que la rapidez de respuesta sea casi inmediata.
+The application is quite fast and could be considered for use cases where almost immediate response speed is required.
+
