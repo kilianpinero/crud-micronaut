@@ -1,41 +1,43 @@
-## Micronaut 4.2.4 Documentation
+# CRUD con Micronaut
 
-- [User Guide](https://docs.micronaut.io/4.2.4/guide/index.html)
-- [API Reference](https://docs.micronaut.io/4.2.4/api/index.html)
-- [Configuration Reference](https://docs.micronaut.io/4.2.4/guide/configurationreference.html)
-- [Micronaut Guides](https://guides.micronaut.io/index.html)
----
+Aplicacion CRUD simple desarrollado con Micronaut. Expone endpoints REST para realizar operaciones básicas en una entidad `Country`.
 
-- [Micronaut Maven Plugin documentation](https://micronaut-projects.github.io/micronaut-maven-plugin/latest/)
-## Feature serialization-jackson documentation
+## Requisitos
 
-- [Micronaut Serialization Jackson Core documentation](https://micronaut-projects.github.io/micronaut-serialization/latest/guide/)
+- Java 11
+- Maven 3.6.2
+- H2 Database
 
+## Ejecución
 
-## Feature maven-enforcer-plugin documentation
+Para ejecutar la aplicación, simplemente ejecutar el siguiente comando:
 
-- [https://maven.apache.org/enforcer/maven-enforcer-plugin/](https://maven.apache.org/enforcer/maven-enforcer-plugin/)
+```bash
+java -jar ./target/crud-micronaut.jar
+```
 
+Esto iniciará la aplicación en modo de desarrollo. Puede acceder a los endpoints REST a través de `http://localhost:8081/country`.
 
-## Feature lombok documentation
+## Endpoints
 
-- [Micronaut Project Lombok documentation](https://docs.micronaut.io/latest/guide/index.html#lombok)
+La aplicación expone los siguientes endpoints:
 
-- [https://projectlombok.org/features/all](https://projectlombok.org/features/all)
-
-
-## Feature hibernate-validator documentation
-
-- [Micronaut Hibernate Validator documentation](https://micronaut-projects.github.io/micronaut-hibernate-validator/latest/guide/index.html)
-
-
-## Feature jdbc-hikari documentation
-
-- [Micronaut Hikari JDBC Connection Pool documentation](https://micronaut-projects.github.io/micronaut-sql/latest/guide/index.html#jdbc)
+- `GET /country/list`: Obtiene la lista de todos los países.
+- `GET /country/list/{id}`: Obtiene un país por su ID.
+- `POST /country/add`: Agrega un nuevo país.
+- `PUT /country/update`: Actualiza un país existente.
+- `DELETE /country/{id}`: Elimina un país por su ID.
 
 
-## Feature micronaut-aot documentation
+## Pruebas
 
-- [Micronaut AOT documentation](https://micronaut-projects.github.io/micronaut-aot/latest/guide/)
+El objetivo de esta operación es comprobar la rapidez con la que levanta el servicio y poder compararlo con otras aplicaciones hechas con lenguajes de programación diferentes.
+Se han hecho 3 pruebas de lanzamiento de esta aplicación y los resultados son los siguientes:
 
+- 3769ms
+- 3253ms
+- 3166ms
 
+## Conclusión
+
+La aplicación es bastante rápida y se podria considerar para fines en los que se necesite que la rapidez de respuesta sea casi inmediata.
